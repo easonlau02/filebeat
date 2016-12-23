@@ -1,7 +1,7 @@
 # From base OS image
 FROM eason02/centos:7.2
 
-MAINTAINER Eason Lau <eason.lau02@hotmailcom>
+MAINTAINER Eason Lau <eason.lau02@hotmail.com>
 
 COPY docker-entrypoint.sh /
 
