@@ -1,0 +1,13 @@
+filebeat:
+  image: docker.cargosmart.com/app/filebeat:5.1.1
+  container_name: filebeat-image
+  restart: always
+  links:
+   - logstash=logstash
+  environment:
+   - logstash=logstash
+  volumes:
+    - ~/filebeat/5.1.1/logs/:/etc/filebeat/logs
+    - ~/filebeat/5.1.1/data:/etc/filebeat/data
+    - ~/filebeat/5.1.1/filebeat.yml:/etc/filebeat/filebeat.yml
+    - /var/log/messages:/etc/filebeat/input/
