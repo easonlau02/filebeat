@@ -1,0 +1,19 @@
+version: '2'
+services:
+  filebeat:
+    image: eason02/filebeat:5.1.1
+    container_name: filebeat-image
+    restart: always
+    environment:
+      - env=${environment}
+      - logstash=${LOGSTASH_HOST}
+    network_mode: host
+    logging:
+      driver: json-file
+      options:
+        max-file: '5'
+        max-size: 10m
+    volumes:
+      - ./5.1.1/logs:/etc/filebeat/logs
+      - ./5.1.1/data:/etc/filebeat/data
+      - ./filebeat.yml:/etc/filebeat/filebeat.yml
