@@ -9,7 +9,7 @@ echo "PROSPECT_FILE_PATTERN_LIST=$PROSPECT_FILE_PATTERN_LIST"
 
 
 # docker-compose.yml
-if [-f "./docker-compose.yml"]; then
+if [ -f "./docker-compose.yml" ]; then
 	echo "./docker-compose.yml exists. Removed/re-generated it."
 	rm ./docker-compose.yml
 fi
@@ -24,7 +24,7 @@ done
 
 
 # filebeat.yml
-if [-f "./filebeat.yml"]; then
+if [ -f "./filebeat.yml" ]; then
 	echo "./filebeat.yml exists. Removed/re-generated it."
 	rm ./filebeat.yml
 fi
