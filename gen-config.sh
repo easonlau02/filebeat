@@ -34,7 +34,7 @@ cp .filebeat.yml.part1 filebeat.yml
 
 for file_pattern in $PROSPECT_FILE_PATTERN_LIST
 do
-	echo "   - $file_pattern" >> filebeat.yml
+	echo "    - $file_pattern" >> filebeat.yml
 done
 
 # append .filebeat.ynl.part2
