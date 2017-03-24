@@ -41,3 +41,4 @@ done
 cat .filebeat.yml.part2 >> filebeat.yml
 
 ls -ltr *.yml
+
